@@ -1,4 +1,4 @@
 Ghostwriter
 ===========
 
-a watermark plugin for AfterShot Pro
+a standalone application for e.g. watermarks in pictures, like the old plugin for Bibble Pro

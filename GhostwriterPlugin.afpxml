@@ -1,8 +1,8 @@
 <!DOCTYPE PropertyScribe>
 <PropertyScribe xmlns="http://www.bibblelabs.com//PropertyScribe/" version="1">
-    <PluginFileData identifier="de.susannej.Ghostwriter" website="" windowsLibFile="" resourcesPath="" macLibFile="/Users/dave/BibbleSVN/trunk/apis/Bibble_5.1_Plugin_SDK/Bibble5.1/examples/Invert/libInvert5.1.dylib" linuxLibFile="" author="Corel" minorVersion="0" bugfixVersion="0" name="Invert5.1" majorVersion="1" sdkVersion="8" dataVersion="1">
+    <PluginFileData identifier="de.susannej.Ghostwriter" website="" windowsLibFile="C:/AfterShotPro_Plugin_SDK-2012-01-17/examples/Ghostwriter/release/Ghostwriter.dll" resourcesPath="" macLibFile="" linuxLibFile="" author="Susanne Jaeckel" minorVersion="0" bugfixVersion="0" name="Ghostwriter2" majorVersion="2" sdkVersion="8" dataVersion="1">
         <StringList name="uiFiles">
-            <li>/Users/dave/BibbleSVN/trunk/apis/Bibble_5.1_Plugin_SDK/Bibble5.1/examples/Invert/Invert.ui</li>
+            <li>C:/AfterShotPro_Plugin_SDK-2012-01-17/examples/Ghostwriter/Ghostwriter.ui</li>
         </StringList>
     </PluginFileData>
 </PropertyScribe>

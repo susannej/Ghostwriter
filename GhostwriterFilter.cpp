@@ -1,4 +1,4 @@
-#include "InvertFilter.h"
+#include "GhostwriterFilter.h"
 #include "PluginPipeSettings.h"
 #include "PluginTile.h"
 #include "PluginImage.h"
@@ -12,7 +12,7 @@
 using namespace std;
 
 
-bool GhostwriterPlugin::needsToRunLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginOptionList &layerOptions) const
+bool GhostwriterFilter::needsToRunLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginOptionList &layerOptions) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );
@@ -22,7 +22,7 @@ bool GhostwriterPlugin::needsToRunLayer(const PluginImageSettings &options, cons
 	return val;
 }
 
-bool GhostwriterPlugin::isSlow(const PluginImageSettings &options, const PluginPipeSettings &settings) const
+bool GhostwriterFilter::isSlow(const PluginImageSettings &options, const PluginPipeSettings &settings) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );
@@ -30,7 +30,7 @@ bool GhostwriterPlugin::isSlow(const PluginImageSettings &options, const PluginP
 	return false;
 }
 
-bool GhostwriterPlugin::isLargeRadius(const PluginImageSettings &options, const PluginPipeSettings &settings) const
+bool GhostwriterFilter::isLargeRadius(const PluginImageSettings &options, const PluginPipeSettings &settings) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );
@@ -38,7 +38,7 @@ bool GhostwriterPlugin::isLargeRadius(const PluginImageSettings &options, const 
 	return false;	//	We only use the current tile.
 }
 
-bool GhostwriterPlugin::isPixelSource(const PluginImageSettings &options, const PluginPipeSettings &settings) const
+bool GhostwriterFilter::isPixelSource(const PluginImageSettings &options, const PluginPipeSettings &settings) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );
@@ -46,7 +46,7 @@ bool GhostwriterPlugin::isPixelSource(const PluginImageSettings &options, const 
 	return false;	//	We don't generate pixels from scratch.
 }
 
-QTransform GhostwriterPlugin::transform(const PluginImageSettings &options, const PluginPipeSettings &settings) const
+QTransform GhostwriterFilter::transform(const PluginImageSettings &options, const PluginPipeSettings &settings) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );
@@ -54,7 +54,7 @@ QTransform GhostwriterPlugin::transform(const PluginImageSettings &options, cons
 	return QTransform();	//	We don't warp the image so return an identity transform.
 }
 
-QSize GhostwriterPlugin::size(const PluginImageSettings &options, const PluginPipeSettings &settings, const QSize &startSize) const
+QSize GhostwriterFilter::size(const PluginImageSettings &options, const PluginPipeSettings &settings, const QSize &startSize) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );
@@ -62,7 +62,7 @@ QSize GhostwriterPlugin::size(const PluginImageSettings &options, const PluginPi
 	return startSize;	//	We don't change the size of the image.
 }
 
-QList<PluginDependency*> GhostwriterPlugin::prerequisites(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile) const
+QList<PluginDependency*> GhostwriterFilter::prerequisites(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );
@@ -71,7 +71,7 @@ QList<PluginDependency*> GhostwriterPlugin::prerequisites(const PluginImageSetti
 	return QList<PluginDependency*>();	//	Empty list - we don't depend on any other tiles.
 }
 
-void GhostwriterPlugin::runLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile, PluginOptionList &layerOptions, int layerPos) const
+void GhostwriterFilter::runLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile, PluginOptionList &layerOptions, int layerPos) const
 {
 	Q_UNUSED( options );
 	Q_UNUSED( settings );

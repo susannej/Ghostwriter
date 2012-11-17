@@ -1,4 +1,12 @@
+build
+debug
+release
 build/*
 debug/*
 release/*
-*.vcproj
+GhostwriterPlugin.vcproj*
+*.sln
+*.suo
+*.idb
+*.ncb
+*.afzplug

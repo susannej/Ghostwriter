@@ -4,10 +4,10 @@
 #include "PluginHub.h"
 
 
-class GhostwriterPlugin : public PluginLayerFilter
+class GhostwriterFilter : public PluginLayerFilter
 {
 public:
-	GhostwriterPlugin(PluginHub *hub, int groupId) : m_hub(hub), m_groupId(groupId) { ; }
+	GhostwriterFilter(PluginHub *hub, int groupId) : m_hub(hub), m_groupId(groupId) { ; }
 	
 	virtual QString name() const { return QString("Invert5.1_Filter"); }
 

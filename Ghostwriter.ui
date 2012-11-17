@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Invert51Form_bis</class>
+ <widget class="SettingsWidget" name="Invert51Form_bis">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>263</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ghostwriter</string>
+  </property>
+  <property name="BIBBLE_PLUGIN_NAME" stdset="0">
+   <string>Ghostwriter</string>
+  </property>
+  <property name="BIBBLE_PLUGIN_GROUP" stdset="0">
+   <string>sampleGroup</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QCheckBox" name="invertOn_checkbox">
+     <property name="text">
+      <string>Ghostwriter</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SettingsWidget</class>
+   <extends>QWidget</extends>
+   <header>SettingsWidget.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setOption(int)</slot>
+    <slot>setOption(QString)</slot>
+    <slot>setOption(bool)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>invertOn_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Invert51Form_bis</receiver>
+   <slot>setOption(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>17</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

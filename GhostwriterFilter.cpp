@@ -1,10 +1,10 @@
+#include "GhostwriterPlugin.h"
 #include "GhostwriterFilter.h"
 #include "PluginPipeSettings.h"
 #include "PluginTile.h"
 #include "PluginImage.h"
 #include "PluginImageSettings.h"
 #include "PluginOptionList.h"
-#include "SampleGroupSettings.h"
 
 #include <QDebug>
 #include <iostream>
@@ -18,7 +18,7 @@ bool GhostwriterFilter::needsToRunLayer(const PluginImageSettings &options, cons
 	Q_UNUSED( settings );
 	
 	bool okay;
-	bool val = layerOptions.getBool(SampleGroup::kEnableInvert, m_groupId, okay);
+	bool val = layerOptions.getBool(GHOSTWRITER_ENABLED, m_groupId, okay);
 	return val;
 }
 

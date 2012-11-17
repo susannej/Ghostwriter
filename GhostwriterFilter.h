@@ -9,7 +9,7 @@ class GhostwriterFilter : public PluginLayerFilter
 public:
 	GhostwriterFilter(PluginHub *hub, int groupId) : m_hub(hub), m_groupId(groupId) { ; }
 	
-	virtual QString name() const { return QString("Invert5.1_Filter"); }
+	virtual QString name() const { return QString("Ghostwriter_Filter"); }
 
 	virtual bool needsToRunLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginOptionList &layerOptions) const;
 	virtual void runLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile, PluginOptionList &layerOptions, int layerPos) const;

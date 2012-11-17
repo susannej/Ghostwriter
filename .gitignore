@@ -10,3 +10,4 @@ GhostwriterPlugin.vcproj*
 *.idb
 *.ncb
 *.afzplug
+*.old

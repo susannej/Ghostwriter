@@ -14,8 +14,8 @@ using namespace std;
 
 bool GhostwriterFilter::needsToRunLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginOptionList &layerOptions) const
 {
-	Q_UNUSED( options );
-	Q_UNUSED( settings );
+	//Q_UNUSED( options );
+	//Q_UNUSED( settings );
 	
 	bool okay;
 	bool val = layerOptions.getBool(GHOSTWRITER_ENABLED, m_groupId, okay);
@@ -77,6 +77,8 @@ void GhostwriterFilter::runLayer(const PluginImageSettings &options, const Plugi
 	Q_UNUSED( settings );
 	Q_UNUSED( layerOptions );
 	
+	qDebug() << "===>>>>   runLayer Method is running";
+
 	PluginImage *	pSrcImg = tile.image();
 	PluginImage *	pDstImg;
 	
@@ -95,6 +97,12 @@ void GhostwriterFilter::runLayer(const PluginImageSettings &options, const Plugi
 	//	We could also use image->paddedWidth() & image->paddedHeight().
 	int tileWidth = settings.paddedWidth();        //Tile Dimensions
 	int tileHeight = settings.paddedHeight();
+
+	bool bOk = true;
+	int gwHeight = layerOptions.getInt( GHOSTWRITER_HEIGHT, m_groupId, bOk );
+	qDebug() << "--->>>>> height = " <<  gwHeight;
+	int gwTrans = layerOptions.getInt( GHOSTWRITER_LUCENT, m_groupId, bOk );
+	qDebug() << "--->>>>> transparency = " << gwTrans;
 
 	uint16 * pSrc = NULL;
 	uint16 * pOut = NULL;

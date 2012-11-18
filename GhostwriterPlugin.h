@@ -54,6 +54,10 @@ public:
 
 private slots:
 	void showAbout() const;
+	void fitIntoCrop() const;
+	void save() const;
+	void handleControlChange(const QString &optionName, int groupId, int layer, const PluginImageSettings &options, 
+							 const PluginOptionList &current, PluginOptionList &changes);
 
 private:
 	PluginHub *m_hub;

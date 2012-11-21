@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Ghostwriter Plugin</string>
+   <string>Ghostwriter</string>
   </property>
   <property name="BIBBLE_PLUGIN_NAME" stdset="0">
    <string>Ghostwriter</string>

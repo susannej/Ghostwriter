@@ -28,6 +28,7 @@
 #define GHOSTWRITER_PLUGINNAME		"Ghostwriter"
 #define GHOSTWRITER_PLUGINGROUP		"ghostwr"// The  plugin group/owner name  for all of yout plug-in's settings keep it short but unique
 #define GHOSTWRITER_GROUP			"Ghostwriter Plugin"		// The group for all of this plug-in's settings
+#define GHOSTWRITER_FILTER			"Ghostwriter_Filter"
 
 #define GHOSTWRITER_ABOUT_BNNAME	"aboutButton"
 #define GHOSTWRITER_SAVE_BNNAME		"saveButton"
@@ -56,12 +57,15 @@ private slots:
 	void showAbout() const;
 	void fitIntoCrop() const;
 	void save() const;
-	void handleControlChange(const QString &optionName, int groupId, int layer, const PluginImageSettings &options, 
-							 const PluginOptionList &current, PluginOptionList &changes);
 
 private:
 	PluginHub *m_hub;
 	int m_id;
 	int m_groupId;
 	QWidget *	m_pWindow;
+	char* m_logoDirName;
+
+	QList<QString> readLogoNames();
+	void readConfigFile();
+	char* chomp(char* string);
 };

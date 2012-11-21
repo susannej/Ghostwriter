@@ -17,9 +17,9 @@ public:
 	
 	virtual bool isSlow(const PluginImageSettings &options, const PluginPipeSettings &settings) const;
 	virtual bool isLargeRadius(const PluginImageSettings &options, const PluginPipeSettings &settings) const;
-	virtual bool isPixelSource(const PluginImageSettings &options, const PluginPipeSettings &settings) const;
-	virtual QTransform transform(const PluginImageSettings &options, const PluginPipeSettings &settings) const;
-	virtual QSize size(const PluginImageSettings &options, const PluginPipeSettings &settings, const QSize &startSize) const;
+	//virtual bool isPixelSource(const PluginImageSettings &options, const PluginPipeSettings &settings) const;
+	//virtual QTransform transform(const PluginImageSettings &options, const PluginPipeSettings &settings) const;
+	//virtual QSize size(const PluginImageSettings &options, const PluginPipeSettings &settings, const QSize &startSize) const;
 	virtual QList<PluginDependency*> prerequisites(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile) const;
 
 private:

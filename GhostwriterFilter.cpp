@@ -14,8 +14,8 @@ using namespace std;
 
 bool GhostwriterFilter::needsToRunLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginOptionList &layerOptions) const
 {
-	//Q_UNUSED( options );
-	//Q_UNUSED( settings );
+	Q_UNUSED( options );
+	Q_UNUSED( settings );
 	
 	bool okay;
 	bool val = layerOptions.getBool(GHOSTWRITER_ENABLED, m_groupId, okay);
@@ -37,7 +37,7 @@ bool GhostwriterFilter::isLargeRadius(const PluginImageSettings &options, const 
 	
 	return false;	//	We only use the current tile.
 }
-
+/*
 bool GhostwriterFilter::isPixelSource(const PluginImageSettings &options, const PluginPipeSettings &settings) const
 {
 	Q_UNUSED( options );
@@ -61,7 +61,7 @@ QSize GhostwriterFilter::size(const PluginImageSettings &options, const PluginPi
 	
 	return startSize;	//	We don't change the size of the image.
 }
-
+*/
 QList<PluginDependency*> GhostwriterFilter::prerequisites(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile) const
 {
 	Q_UNUSED( options );
@@ -74,10 +74,10 @@ QList<PluginDependency*> GhostwriterFilter::prerequisites(const PluginImageSetti
 void GhostwriterFilter::runLayer(const PluginImageSettings &options, const PluginPipeSettings &settings, PluginTile &tile, PluginOptionList &layerOptions, int layerPos) const
 {
 	Q_UNUSED( options );
-	Q_UNUSED( settings );
-	Q_UNUSED( layerOptions );
+	//Q_UNUSED( settings );
+	//Q_UNUSED( layerOptions );
 	
-	qDebug() << "===>>>>   runLayer Method is running";
+	qDebug() << "===>>>>   Ghostwriter : runLayer Method is running";
 
 	PluginImage *	pSrcImg = tile.image();
 	PluginImage *	pDstImg;
@@ -100,9 +100,9 @@ void GhostwriterFilter::runLayer(const PluginImageSettings &options, const Plugi
 
 	bool bOk = true;
 	int gwHeight = layerOptions.getInt( GHOSTWRITER_HEIGHT, m_groupId, bOk );
-	qDebug() << "--->>>>> height = " <<  gwHeight;
+	//qDebug() << "--->>>>> height = " <<  gwHeight;
 	int gwTrans = layerOptions.getInt( GHOSTWRITER_LUCENT, m_groupId, bOk );
-	qDebug() << "--->>>>> transparency = " << gwTrans;
+	//qDebug() << "--->>>>> transparency = " << gwTrans;
 
 	uint16 * pSrc = NULL;
 	uint16 * pOut = NULL;
